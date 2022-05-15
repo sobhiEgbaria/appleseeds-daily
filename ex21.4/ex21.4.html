@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="">
+        <h3> clicks the lightbulb, it should be turned on, clicking it again  will turn it off.</h3>
+
+        <img src="./OFFbulb.jpg" alt="" class="img">
+        <h1 class="h1"></h1>
+</form>
+
+   
+
+    <script>
+        const img = document.querySelector(".img");
+
+        img.addEventListener("click", (event) =>{
+
+            if (img.src.match("OFFbulb"))  img.src = "ONbulb.jpg"; 
+                    else {img.src = "OFFbulb.jpg"; }
+            
+        })
+
+    </script>
+</body>
+</html>

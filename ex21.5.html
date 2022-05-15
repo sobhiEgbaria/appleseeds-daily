@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>how many smileys you wont to see </h1>
+  <input type="text" class="addItem" placeholder="enter a food">
+  <input type="button" value="click her" class="btn">
+  <p class="h1"></p>
+  <div class="smile"></div>
+  
+  
+
+  <script>
+
+    const numOfSmile = document.querySelector('.addItem');
+    const btn = document.querySelector('.btn');
+    const h1 = document.querySelector('.h1');
+
+btn.addEventListener('click', function() {
+    let num = parseInt(numOfSmile.value);
+
+		if (numOfSmile.value == "" || (isNaN(num)) ) {
+            const error = document.createElement('p');
+		    error.textContent = "try again";
+		    h1.appendChild(error);
+		    numOfSmile.value = ''; 
+        }
+        
+        //if input is empty, skip everything
+       
+		for (let i = 0; i < num; i++) {
+      const newItem = document.createElement('img');
+      newItem.src = 'https://image.freepik.com/free-icon/smiley_318-121680.jpg';
+     let img = document.querySelector('.smile')
+     img.appendChild(newItem);
+        }
+});
+  </script>
+
+</body>
+
+</html>
+</body>
+</html>

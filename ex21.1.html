@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="">
+        <input type="text" placeholder="your age is ?" class="age"> 
+        <input type="button" value="click me" class="btn">
+</form>
+
+    <h1></h1>
+
+    <script>
+        const ageInput = document.querySelector(".age");
+        const btn = document.querySelector(".btn");
+        const h1 = document.querySelector("h1")
+
+        btn.addEventListener("click", () =>{
+
+            if (ageInput.value >= 18){
+                 h1.textContent = "you can drink appear";
+            }
+            else {
+         
+                h1.textContent = "no no no  you cant drink appear";
+            }
+        })
+
+    </script>
+</body>
+</html>

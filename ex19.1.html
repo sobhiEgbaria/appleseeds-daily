@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Document</title>
+<script src="./script.js" defer></script>
+</head>
+<body>
+
+<ul>
+    <li>title 1</li>
+    <li class="start-here">title 2</li>
+    <li>
+        <ul>
+            <li>sub title 1</li>
+            <li>sub title 2</li>
+            <li>sub title 3</li>
+        </ul>
+    </li>
+    <li class="last-here">title 3</li>
+</ul>
+<div>
+<p>Hello World!</p>
+</div>
+
+<script>
+
+    const title2 = document.querySelector(".start-here");
+            title2.textContent = "main title"
+
+    const headTitle = document.querySelector("title");
+        headTitle.innerText = "new head title"
+
+    const paragraph = document.querySelector("p");
+            paragraph.textContent = "the new paragraph content"
+
+    const perntUL = document.querySelector("ul ul");
+    const newLI = document.createElement("li");
+        newLI.innerText = "sub title 4";
+
+    perntUL.appendChild(newLI);
+
+    const firstUL = document.querySelector("ul");
+    const lastTitle = document.querySelector(".last-here");
+
+    firstUL.removeChild(lastTitle);
+    
+</script>
+</body>
+</html>

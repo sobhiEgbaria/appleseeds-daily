@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+        <input type="button" value="+" class = "plus">
+        <input type="button" value="-" class = "minus">
+    </form>
+         <p class="myP">welcom to javaScript DOM </p>
+
+
+    <script>
+
+        const plus = document.querySelector(".plus")
+        const minus = document.querySelector(".minus")
+        const p = document.querySelector(".myP")
+        let i = 7
+               
+        plus.addEventListener("click",()=> {
+            if (6<i<100) {
+                i+=10;
+                p.style.fontSize = `${i}px`;   }
+
+        })
+
+        minus.addEventListener("click",()=> {
+            if (6<i<100) {
+                i-=10;
+                p.style.fontSize = `${i}px`;   }
+
+        })
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>why are you interested in this position</h2>
+    <form action="">
+            
+            <textarea name="jobText" id="texst" cols="30" rows="10"></textarea>
+           <br> 
+           <input type="submit" value="click her" class="btn">
+           <h3 class="h3"></h3>
+    </form>
+
+
+
+    <script>
+        let textInput = document.querySelector("#texst");
+        let btn = document.querySelector(".btn");
+        let h3 = document.querySelector(".h3");
+
+        btn.addEventListener("click", (event)=>{
+
+            if (textInput.value.length <= 100) {
+
+                event.preventDefault();
+                h3.textContent = "its should mor than 100 ....."
+            }
+
+        })
+    </script>
+</body>
+</html>
